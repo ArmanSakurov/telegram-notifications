@@ -1,0 +1,13 @@
+5861795073:AAE2OAdluHhlJpZG0Hb5rPbXXgo32jxtMYI  // token - secret_bot
+
+-1001781287317 // chat id - id чата, в который нужно отправить сообщение
+
+as_test_notifications_bot // имя бота, который будет отправлять сообщения (бота создаем через @BotFather)
+
+https://api.telegram.org/bot{secret_bot}/getUpdates
+
+https://api.telegram.org/bot5861795073:AAE2OAdluHhlJpZG0Hb5rPbXXgo32jxtMYI/getUpdates // ссылка для того, чтобы посмотреть id чата
+
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001781287317", "text": "HELLO!", "disable_notification": true}' https://api.telegram.org/bot5861795073:AAE2OAdluHhlJpZG0Hb5rPbXXgo32jxtMYI/sendMessage //апи для отправки сообщений в телеграм
+
+java -DconfigFile=notifications/telegram.json -jar notifications/allure-notifications-4.2.1.jar
